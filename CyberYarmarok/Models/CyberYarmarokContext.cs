@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using CyberYarmarok.Models;
 
-namespace CyberYarmarok.Сontexts
+namespace CyberYarmarok.Models
 {
     public class CyberYarmarokContext : DbContext
     {
@@ -28,7 +27,7 @@ namespace CyberYarmarok.Сontexts
 
             //Bid
             modelBuilder.Entity<Bid>();
-                                
+
             //Fair
             modelBuilder.Entity<Fair>()
                         .HasMany(e => e.Items)
@@ -71,7 +70,7 @@ namespace CyberYarmarok.Сontexts
                         .WithOne(e => e.Author)
                         .HasForeignKey(e => e.AuthorId)
                         .OnDelete(DeleteBehavior.NoAction);
-                
+
         }
     }
 }

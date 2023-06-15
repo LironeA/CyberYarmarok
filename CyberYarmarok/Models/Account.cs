@@ -7,7 +7,7 @@ namespace CyberYarmarok.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string PaymentDetails{ get; set; }
-        public virtual ICollection<Fair>? Fairs { get; set; }
+        public virtual ICollection<Fair>? Fairs { get; set; } = null;
 
         public Account() { }
     }
